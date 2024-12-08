@@ -20,8 +20,8 @@ CREATE TABLE IF NOT EXISTS bids (
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
--- INSERT INTO auctions (car_id, start_time, end_time)
--- VALUES
---     (1, '2024-12-07 10:00:00', '2024-12-07 12:00:00'),
---     (2, '2024-12-07 12:30:00', '2024-12-07 14:30:00'),
---     (3, '2024-12-07 15:00:00', '2024-12-07 17:00:00');
+INSERT INTO auctions (car_id, start_time, end_time)
+VALUES
+    (1, '2024-12-07 10:00:00', '2024-12-07 12:00:00'),
+    (2, '2024-12-07 12:30:00', '2024-12-07 14:30:00'),
+    (3, '2024-12-07 15:00:00', '2024-12-07 17:00:00');

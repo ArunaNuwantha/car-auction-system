@@ -1,11 +1,10 @@
 const WebSocket = require("ws");
 
-const ws = new WebSocket("ws://localhost:8080"); // Replace with your WebSocket server address
+const ws = new WebSocket("ws://localhost:8080");
 
 ws.on("open", () => {
   console.log("Connected to WebSocket server.");
 
-  // Send the "getAllAuctions" event to the server
   ws.send(
     JSON.stringify({
       event: "getAllAuctions",

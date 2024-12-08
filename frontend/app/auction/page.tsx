@@ -13,7 +13,6 @@ interface Auction {
 
 export default function AuctionListPage() {
   const [auctions, setAuctions] = useState<Auction[]>([]);
-  const [socket, setSocket] = useState<WebSocket | null>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -22,7 +21,6 @@ export default function AuctionListPage() {
 
     const connectWebSocket = () => {
       ws = new WebSocket("ws://localhost:8080");
-      setSocket(ws);
 
       ws.onopen = () => {
         console.log("Connected to WebSocket for auction updates.");
